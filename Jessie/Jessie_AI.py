@@ -1,36 +1,21 @@
-import pyttsx3,datetime,time  # sudo apt-get update && sudo apt-get install espeak sudo pip3 install pyttsx3
+import datetime,time 
 import speech_recognition as sr # sudo pip3 install SpeechRecognition % sudo pip3 install SpeechRecognition OR sudo apt-get install python-pyaudio python3-pyaudio 
 import wikipedia,random         # sudo pip3 install wikipedia
 import webbrowser,os,wolframalpha # sudo pip3 install wolframalpha
 from playsound import playsound # sudo pip3 install playsound
 from gtts import gTTS
 
-client = wolframalpha.Client('3R7PL6-EG93KRP2QQ') # you Fill up the your wolfromAlpha Id .
-
-engine = pyttsx3.init()
+client = wolframalpha.Client('') # you Fill up the your wolfromAlpha Id .
 
 def speech(Text):
     tts = gTTS(text=audio, lang='en')
     tts.save("jessie.mp3")
     playsound("jessie.mp3")
 
-    # engine.setProperty('rate', 138)
-    # engine.setProperty('volume', 0.5)
-    # engine.setProperty("voice",'english+f3')
-    # engine.say(Text)
-    # engine.runAndWait()
-
 def speak(audio):
     tts = gTTS(text=audio, lang='en')
     tts.save("jessie.mp3")
     playsound("jessie.mp3")
-
-    # engine.setProperty('rate', 185)
-    # engine.setProperty('volume', 0.5)
-    # engine.getProperty("voices")
-    # engine.setProperty("voice",'english+f3')
-    # engine.say(audio)
-    # engine.runAndWait()
 
 def greetMe(hour):  
     if hour >= 0 and hour <=12:
